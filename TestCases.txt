@@ -1,0 +1,45 @@
+TestCases
+=========
+
+Scenario: Get posts
+GIVEN Index is requested
+THEN collection of Post is returned
+
+Scenario: find post by tag
+GIVEN a tag
+WHEN is found 
+THEN collection of Post is returned
+
+Scenario: find post by tag
+GIVEN a tag
+WHEN is NOT found 
+THEN null is returned
+
+Scenario: find post by permalink
+GIVEN a permalink
+WHEN a Post is found
+THEN the Post is returned
+
+Scenario: find post by permalink
+GIVEN a permalink
+WHEN a Post is NOT found 
+THEN null is returned
+
+Scenario: post a new comment
+GIVEN a new Comment
+WHEN Post is correct 
+THEN Comment is added 
+AND permalink is returned 
+
+Scenario: post a new comment
+GIVEN a new Comment
+WHEN Post is NOT correct 
+THEN Comment is NOT added 
+AND null is returned
+
+
+
+
+
+
+ 
