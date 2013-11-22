@@ -1,0 +1,14 @@
+For Self-Host a Web API
+http://www.asp.net/web-api/overview/hosting-aspnet-web-api/self-host-a-web-api
+For Configuring ASP.NET Web API 
+http://www.asp.net/web-api/overview/extensibility/configuring-aspnet-web-api
+For Routing and Action Selection 
+http://www.asp.net/web-api/overview/web-api-routing-and-actions/routing-and-action-selection
+Get started with Windows Azure and ASP.NET
+http://www.windowsazure.com/en-us/develop/net/tutorials/get-started/
+
+CRUD Grid Using AngularJS, WebAPI, Entity Framework (EF), Bootstrap
+http://code.msdn.microsoft.com/CRUD-Grid-Using-AngularJS-84afaf13
+
+
+http://stackoverflow.com/questions/16842910/having-difficulties-setting-up-a-mock-to-unit-test-webapi-post
