@@ -3,7 +3,7 @@ using System.Net.Http;
 using System.Web.Http;
 using Core;
 using Infrastructure;
-using DependencyResolution.App_Start;
+using DependencyResolution;
 using NUnit.Framework;
 
 namespace WebAPI.Tests.Server

@@ -57,15 +57,14 @@ namespace Infrastructure.Repositories.MongoDB
                     .DocumentsAffected > 0;
         }
 
-        public IList<TEntity>
+        public IEnumerable<TEntity>
             SearchFor(Expression<Func<TEntity, bool>> predicate)
-        {            
+        {
             return collection.FindAll()
-                    .Where(predicate.Compile())
-                        .ToList();
+                    .Where(predicate.Compile());
         }
 
-        public IList<TEntity> GetAll()
+        public IEnumerable<TEntity> GetAll()
         {
             return collection.FindAllAs<TEntity>().ToList();
         }

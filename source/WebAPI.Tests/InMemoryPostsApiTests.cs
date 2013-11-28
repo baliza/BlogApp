@@ -1,52 +1,77 @@
 ﻿
 using WebAPI.Tests.Server;
-using WebAPI.Tests.Test;
+using WebAPI.Tests.Tests;
 using NUnit.Framework;
 
 namespace WebAPI.Tests
 {
     [TestFixture]
-    public class InMemoryPostsApiTests : PostsApiTests
+    public class InMemoryGetAllTests : GetAllPost
     {
-        public InMemoryPostsApiTests()
+        public InMemoryGetAllTests()
             : base(new InMemoryApiServer())
         {
         }
     }
 
     [TestFixture]
-    public class InMemoryPostApiTests : PostApiTests
+    public class InMemoryGetByPermalinkTests : GetPostByPermalink
     {
-        public InMemoryPostApiTests()
+        public InMemoryGetByPermalinkTests()
+            : base(new InMemoryApiServer())
+        {
+        }
+    }
+    [TestFixture]
+    public class InMemoryPostGetByTagTests : GetPostsByTag
+    {
+        public InMemoryPostGetByTagTests()
             : base(new InMemoryApiServer())
         {
         }
     }
 
     [TestFixture]
-    public class InMemoryAddPostApiTests : AddPostApiTests
+    public class InMemoryPostGetByAuthorTests : GetPostsByAuthor
     {
-        public InMemoryAddPostApiTests()
+        public InMemoryPostGetByAuthorTests()
+            : base(new InMemoryApiServer())
+        {
+        }
+    }
+    [TestFixture]
+    public class InMemoryPostAddTests : AddPost
+    {
+        public InMemoryPostAddTests()
             : base(new InMemoryApiServer())
         {
         }
     }
 
     [TestFixture]
-    public class InMemoryAddCommentApiTests : AddCommentApiTests
+    public class InMemoryPostCommentAddTests : AddComment
     {
-        public InMemoryAddCommentApiTests()
+        public InMemoryPostCommentAddTests()
             : base(new InMemoryApiServer())
         {
         }
     }
     [TestFixture]
-    public class InMemoryLikeCommentApiTests : LikeCommentApiTests
+    public class InMemoryPostCommentLikeTests : LikeComment
     {
-        public InMemoryLikeCommentApiTests()
+        public InMemoryPostCommentLikeTests()
             : base(new InMemoryApiServer())
         {
         }
     }
+    [TestFixture]
+    public class InMemoryGetCommentsTests : GetComments
+    {
+        public InMemoryGetCommentsTests()
+            : base(new InMemoryApiServer())
+        {
+        }
+    }
+  
    
 }

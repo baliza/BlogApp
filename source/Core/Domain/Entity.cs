@@ -21,7 +21,7 @@ namespace Core.Domain
         /// Gets or sets the entity ID.
         /// </summary>
         /// <value>The entity ID.</value>
-        public virtual String Id { get; private set; }
+        public virtual String Id { get; set; }
 
         /// <summary>
         /// Gets or sets the date and time the entity was last updated.

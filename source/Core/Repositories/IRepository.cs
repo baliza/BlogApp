@@ -13,9 +13,8 @@ namespace Core.Repositories
         bool Insert(TEntity entity);
         bool Update(TEntity entity);
         bool Delete(TEntity entity);
-        IList<TEntity>
-            SearchFor(Expression<Func<TEntity, bool>> predicate);
-        IList<TEntity> GetAll();
+        IEnumerable<TEntity> SearchFor(Expression<Func<TEntity, bool>> predicate);
+        IEnumerable<TEntity> GetAll();
         TEntity GetById(string id);
     } 
 }

@@ -11,40 +11,27 @@ using Core.Services.Impl;
 
 using Infrastructure.Repositories;
 
-using WebAPI.Tests.Test;
+using WebAPI.Tests.Tests;
 using WebAPI.Tests.Server;
 using System.Dynamic;
 
 
 
-namespace WebAPI.Tests.Test
+namespace WebAPI.Tests.Tests
 {
-    public abstract class PostApiTests
+    public abstract class GetPostByPermalink : PostBaseTest
     {
-        private readonly IApiServer _server;
+     
 
         private const string PostsRelativeUri = "api/post/tomatosoup";
 
-        protected PostApiTests(IApiServer apiServer)
-        {
-            _server = apiServer;
-        }
-
-        [SetUp]
-        public void Setup()
-        {
-            _server.Start();
-            Type myType = typeof(WebAPI.Controllers.PostController);
-        }
-
-        [TearDown]
-        public void TearDown()
-        {
-            _server.Stop();
-        }
+        protected GetPostByPermalink(IApiServer apiServer)
+            : base(apiServer)
+        { }
+      
 
         [Test]
-        public void When_Get_Existing_Post_Returns_OK()
+        public void Given_TomatoSoup_Is_The_Permalink_When_Get_Post_Then_Returns_OK()
         {
             var valuesUri = new Uri(_server.BaseAddress, PostsRelativeUri);
             using (var client = new HttpClient(_server.ServerHandler))
@@ -56,7 +43,7 @@ namespace WebAPI.Tests.Test
         }
 
         [Test]
-        public void When_GetByPermalink_Returns_the_Correct_Post()
+        public void Given_TomatoSoup_Is_The_Permalink_When_Get_Post_Then_Right_Post()
         {
             var valuesUri = new Uri(_server.BaseAddress, PostsRelativeUri);
             using (var client = new HttpClient(_server.ServerHandler))
@@ -69,7 +56,7 @@ namespace WebAPI.Tests.Test
         }
 
         [Test]
-        public void When_Get_NonExistant_Post_Returns_NotFound()
+        public void Given_Xmas_Is_The_Permalink_When_Get_Post_Then_Returns_NotFound()
         {
             var valuesUri = new Uri(_server.BaseAddress, "api/Post/Xmas_day");
             using (var client = new HttpClient(_server.ServerHandler))

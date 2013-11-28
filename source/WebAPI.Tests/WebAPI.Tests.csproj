@@ -81,11 +81,15 @@
     <Compile Include="Server\AspNetApiServer.cs" />
     <Compile Include="Server\IApiServer.cs" />
     <Compile Include="Server\InMemoryApiServer.cs" />
-    <Compile Include="Tests\LikeCommentApiTests.cs" />
-    <Compile Include="Tests\AddCommentApiTests.cs" />
-    <Compile Include="Tests\PostsApiTests.cs" />
-    <Compile Include="Tests\AddPostApiTests.cs" />
-    <Compile Include="Tests\PostApiTests.cs" />
+    <Compile Include="Tests\BaseTest.cs" />
+    <Compile Include="Tests\GetComments.cs" />
+    <Compile Include="Tests\LikeComment.cs" />
+    <Compile Include="Tests\AddComment.cs" />
+    <Compile Include="Tests\GetAllPost.cs" />
+    <Compile Include="Tests\AddPost.cs" />
+    <Compile Include="Tests\GetPostsByAuthor.cs" />
+    <Compile Include="Tests\GetPostsByTag.cs" />
+    <Compile Include="Tests\GetPostByPermalink.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.csproj">

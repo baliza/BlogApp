@@ -61,14 +61,14 @@ namespace Infrastructure.Repositories
             return true;
         }
 
-        public IList<User> SearchFor(System.Linq.Expressions.Expression<Func<User, bool>> predicate)
+        public IEnumerable<User> SearchFor(System.Linq.Expressions.Expression<Func<User, bool>> predicate)
         {                      
             return collection.AsQueryable<User>()
                         .Where(predicate)
                         .ToList();
         }
 
-        public IList<User> GetAll()
+        public IEnumerable<User> GetAll()
         {
             return collection;
         }
