@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>My Blog:</title>
+
+    <!-- Libraries -->
+    <script src="lib/jquery-1.10.2.js"></script>
+    <script src="lib/json2.js"></script>
+    <script src="lib/underscore.js"></script>
+    <script src="lib/backbone.js"></script>
+
+    <!-- Application logic -->
+    <script src="Model/Post.js"></script>    
+
+    <!-- Views -->
+    <script src="View/PostView.js"></script>
+    <script src="View/AppView.js"></script>
+
+    <script src="global.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        <div class="nav">
+            <h2>LogList</h2>
+            this is the magic blog for webapi, backbone, ...
+
+            <a href="#newpost">New Post</a>
+
+        </div>
+
+
+        <div class="postsTab">
+            <h1>Posts:</h1>
+
+            <!--List iof post will be added here-->
+            <div id="postsList">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Templates -->
+    
+
+    <script type="text/template" id="login-template">
+        <div class="view post">
+            <h2><a href="/api/post/<%- permalink %>"><%- title %></a></h2>
+            Posted <%- createdOn %> <i>By <%- author %></i><br>
+            <h2>
+                <label><%- title %></label>
+            </h2>
+            <label><%- author %></label>
+            <p />
+            <div class="post-body">
+                <%= body %>
+            </div>
+        </div>
+    </script>
+
+
+    <script type="text/template" id="post-template">
+        <div class="view post">
+            <h2><a href="/api/post/<%- permalink %>"><%- title %></a></h2>
+            Posted <%- createdOn %> <i>By <%- author %></i><br>
+            <h2>
+                <label><%- title %></label>
+            </h2>
+            <label><%- author %></label>
+            <p />
+            <div class="post-body">
+                <%= body %>
+            </div>                        
+        </div>
+    </script>
+
+</body>
+</html>
+
